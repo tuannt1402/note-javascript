@@ -1,1 +1,3 @@
-# note-javascript
+# Nguyên tắc cơ bản
+# object
+
