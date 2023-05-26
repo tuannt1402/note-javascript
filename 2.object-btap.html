@@ -77,23 +77,53 @@
         }
     }
 
-    calculator.read();
-    alert(calculator.sum());
-    alert(calculator.mul());
+    // calculator.read();
+    // alert(calculator.sum());
+    // alert(calculator.mul());
 
     //vd2 xiềng xích
     let ladder = {
         step: 0,
         up() {
             this.step++;
+            return this;
         },
         down() {
             this.step--;
+            return this;
         },
         showStep: function() { // hiển thị các bước hiện tại
-            alert(this.step);
+            console.log(this.step);
+            return this;
         }
     };
+    // console.log(ladder);
+    // ladder
+    //     .up()
+    //     .up()
+    //     .down()
+    //     .showStep() // 1
+    //     .down()
+    //     .showStep(); // 0
+
+
+
+    // function cal() {
+    //     let set = 0;
+    //     return {
+    //         up() {
+    //             set++;
+    //         },
+    //         down() {
+    //             set--;
+    //         },
+    //         show() {
+    //             console.log(set);
+    //         }
+    //     }
+    // }
+
+    // const check = cal();
 </script>
 
 </html>
