@@ -51,10 +51,11 @@
         height: 300,
         title: "My menu"
     };
+
     function multiplyNumeric(obj) {
-        for(let key in obj) {
+        for (let key in obj) {
             if (typeof obj[key] == 'number') {
-                obj[key]*=2;
+                obj[key] *= 2;
             }
         }
     }
@@ -62,7 +63,37 @@
 
 
     //Chương 2 "this"
-    
+    //vd1 tạo 1 máy tính
+    let calculator = {
+        read() {
+            this.a = parseInt(prompt('nhập vào a', 0));
+            this.b = parseInt(prompt('nhập vào b', 0));
+        },
+        sum() {
+            return this.a + this.b;
+        },
+        mul() {
+            return this.a * this.b
+        }
+    }
+
+    calculator.read();
+    alert(calculator.sum());
+    alert(calculator.mul());
+
+    //vd2 xiềng xích
+    let ladder = {
+        step: 0,
+        up() {
+            this.step++;
+        },
+        down() {
+            this.step--;
+        },
+        showStep: function() { // hiển thị các bước hiện tại
+            alert(this.step);
+        }
+    };
 </script>
 
 </html>
